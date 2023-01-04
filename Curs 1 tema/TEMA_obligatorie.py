@@ -1,4 +1,4 @@
-'''
+"""
 Tema 1 - Setup, Variabile, Tipuri de date
 Exerciții Recomandate - grad de dificultate: Ușor .
 1. Revizualizează întâlnirea 1 și ia notițe în caz că ți-a scăpat ceva.
@@ -8,8 +8,7 @@ Exerciții Recomandate - grad de dificultate: Ușor .
 Astfel, la întâlnirea LIVE deja va fi a 2-a oară când vei auzi conceptele și sigur ți
 se vor întipări mai bine în minte.
 Link: https://www.itfactory.ro/8174437-intro-in-programare/
-'''
-
+"""
 
 # Exerciții obligatorii - grad de dificultate: Ușor spre Mediu:
 # 1. În cadrul unui comentariu, explică cu cuvintele tale ce este o variabilă.
@@ -64,7 +63,7 @@ print(len(nume_complet))
 # - lungimea;
 # - lățimea.
 lungimea = 12
-latimea =11
+latimea = 11
 
 # Afișează: 'Aria dreptunghiului este x'.
 print(f'Aria dreptunghiului este {lungimea * latimea}.')
@@ -72,8 +71,7 @@ print(f'Aria dreptunghiului este {lungimea * latimea}.')
 # 8. Având stringul: 'Coral is either the stupidest animal or the smartest rock':
 # - afișează de câte ori apare cuvântul 'the';
 exemplu = 'Coral is either the stupidest animal or the smartest rock'
-print(exemplu.count('the', 14)) # gaseste cuvantul 'the'
-
+print(exemplu.count('the', 14))  # gaseste cuvantul 'the'
 
 # 9. Același string:
 # inlocuieste the cu THE peste tot
