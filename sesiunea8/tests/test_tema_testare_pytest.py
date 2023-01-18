@@ -35,7 +35,7 @@ def test_circumferinta_cerc(n, expected):
 ])
 def test_aria(lun, lat, expected):
     d1 = Dreptunghi(lun, lat, 'mov')
-    assert d1.aria() == expected
+    assert d1.aria_dreptunghi() == expected
 
 
 @pytest.mark.parametrize('lun, lat, expected', [
@@ -44,4 +44,4 @@ def test_aria(lun, lat, expected):
 ])
 def test_perimetru(lun, lat, expected):
     d1 = Dreptunghi(lun, lat, 'albastru')
-    assert d1.perimetrul() == expected
+    assert d1.perimetru_dreptunghi() == expected

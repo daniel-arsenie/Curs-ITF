@@ -49,12 +49,12 @@ class Dreptunghi:
               f'latimea {self.latime}, '
               f'culoarea {self.culoare}.')
 
-    def aria(self):
+    def aria_dreptunghi(self):
         aria_dreptunghi = self.latime * self.lungime
         return aria_dreptunghi
 
-    def perimetrul(self):
-        perimetru = 2 * (self.aria())
+    def perimetru_dreptunghi(self):
+        perimetru = 2 * (self.aria_dreptunghi())
         return perimetru
 
 # 3. Alegeti una din temele de mai sus
