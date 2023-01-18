@@ -38,15 +38,14 @@ print(20 * '-', 'Ex. 1 aria()', 20 * '-')
 print(c1.aria())
 print(c2.aria())
 
-
 print(20 * '-', 'Ex. 1 diametru()', 20 * '-')
 print(c1.diametru())
 print(c2.diametru())
 
-
 print(20 * '-', 'Ex. 1 circumferinta()', 20 * '-')
 print(c1.circumferinta())
 print(c2.circumferinta())
+
 
 # 2. Clasa Dreptunghi
 # Atribute: lungime, lățime, culoare
@@ -82,8 +81,9 @@ class Dreptunghi:
     def schimba_culoarea(self, noua_culoare):
         self.culoare = noua_culoare
 
-d1 = Dreptunghi(7,3, 'roz')
-d2 = Dreptunghi(10,5,'albastru')
+
+d1 = Dreptunghi(7, 3, 'roz')
+d2 = Dreptunghi(10, 5, 'albastru')
 
 print(20 * '-', 'Ex. 2 descrie()', 20 * '-')
 d1.descrie()
@@ -121,17 +121,23 @@ class Angajat:
         self.nume = nume
         self.prenume = prenume
         self.salariu = salariu
+
     def descrie(self):
         print(f'Nume: {self.nume}, prenume: {self.prenume}, salariu: RON {self.salariu}.')
+
     def nume_complet(self):
         return f'{self.nume} {self.prenume}'
+
     def salariu_lunar(self):
         return self.salariu
+
     def salariu_anual(self):
         return 12 * self.salariu
+
     def marire_salariu(self, procent):
-        self.procent =  procent
+        self.procent = procent
         return self.salariu * ((100 + self.procent) / 100)
+
 
 angajat1 = Angajat('Oprea', 'Daniel', 1000)
 angajat2 = Angajat('Vasiliev', 'Aleksei', 2500)
@@ -170,17 +176,21 @@ class Cont:
         self.iban = iban
         self.titular_cont = titular_cont
         self.sold = sold
+
     def afisare_sold(self):
         print(f'Titularul {self.titular_cont} are in contul {self.iban} suma de {self.sold} lei.')
+
     def debitare_cont(self, suma):
         self.sold += suma
         print(f'{self.titular_cont}: Am adaugat cu succes {suma} lei. Soldul actual: {self.sold} lei.')
+
     def creditare_cont(self, suma):
         if suma > self.sold:
             print(f'{self.titular_cont}: Nu se poate face plata. Fonduri insuficiente.')
         else:
             self.sold -= suma
             print(f'{self.titular_cont}: Ati platit {suma} lei. Soldul actual: {self.sold} lei.')
+
 
 cont1 = Cont('GB29 NWBK 6016 1331 9268 19', 'Oprea Daniel', 4000)
 cont2 = Cont('AT48 3200 0000 1234 5864', 'Vasiliev Aleksei', 12500)
