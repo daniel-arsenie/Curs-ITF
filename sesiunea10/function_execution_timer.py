@@ -24,7 +24,7 @@ runtime_counter()
 print(50 * '#')
 
 
-# Sa se genereze primele 100 de numere prime
+# 2. Sa se genereze primele 100 de numere prime
 # folosind liste, si apoi folosind generator.
 # Comparati diferenta de timp necesara generarii.
 

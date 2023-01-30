@@ -1,4 +1,4 @@
-# Scrieti un decorator care primeste ca argument
+# 3. Scrieti un decorator care primeste ca argument
 # numele unui fisier si pentru orice functie apelata,
 # el va scrie in acel fisier numele functiei,
 # lista de argumente ca si string
