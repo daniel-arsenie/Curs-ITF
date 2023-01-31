@@ -1,20 +1,20 @@
 # 1. Sa se implementeze un decorator care masoara timpul necesar executiei unei functii.
 import functools
-from time import perf_counter, sleep
+from time import perf_counter
 
 
-def function_timer(func):
+def func_timer(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         start = perf_counter()
         func(*args, **kwargs)
         stop = perf_counter()
-        print(f'{stop - start}')
+        print(stop - start)
 
     return wrapper
 
 
-@function_timer
+@func_timer
 def runtime_counter():
     print('Counting the seconds...')
 
@@ -28,17 +28,20 @@ print(50 * '#')
 # folosind liste, si apoi folosind generator.
 # Comparati diferenta de timp necesara generarii.
 
-@function_timer
-def get_odd_numbers(n):
-    odd = 1
-    odd_list = []
-    for i in range(n):
-        odd_list.append(odd)
-        odd += 2
-    print(odd_list)
+@func_timer
+def get_odd_numbers_list(n):
+    count = 1
+    current = 0
+    odd_numbers_list = []
 
-
-get_odd_numbers(100)
+    while count <= n:
+        if current % 2 != 0:
+            odd_numbers_list.append(current)
+            count += 1
+            current += 1
+        else:
+            current += 1
+    print(odd_numbers_list)
 
 
 def get_odd(n):
@@ -51,12 +54,15 @@ def get_odd(n):
         current_number += 1
 
 
-@function_timer
-def get_n_odd_numbers():
+@func_timer
+def get_n_odd_numbers_generator(n):
     emty = []
-    for i in get_odd(100):
+    for i in get_odd(n):
         emty.append(i)
     print(emty)
 
 
-get_n_odd_numbers()
+get_odd_numbers_list(100)
+get_n_odd_numbers_generator(100)
+
+print(17 * '=', 'Generator WINS', 17 * '=')
