@@ -1,0 +1,33 @@
+<form action="{% url 'spendings:add' %}" method="post">
+{% csrf_token %}
+<fieldset>
+        <label for="location">
+            Location:
+        </label>
+        <input type = 'text' name ='location' id ='location'>
+        <br>
+        <label for="amount">
+            Amount:
+        </label>
+        <input type = 'text' name ='amount' id ='amount'>
+        <br>
+        <label for="description">
+            Description:
+        </label>
+        <input type = 'text' name ='description' id ='description'>
+        <br>
+        <label for="paid_with">
+            Paid with:
+            <label for="paid_with(rev)">
+                Revolut
+            </label>
+                <input type="radio" name="paid_with" id="paid_with(rev)" value="rev">
+
+             <label for="paid_with(ing)">
+                ING
+            </label>
+                <input type="radio" name="paid_with" id="paid_with(ing)" value="ing">
+        </label>
+    </fieldset>
+    <input type="submit" value="ADD">
+</form>
