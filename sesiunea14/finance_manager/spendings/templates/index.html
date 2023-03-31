@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Welcome to my site!
+{% endblock %}
+
+{% block content %}
+    {% include 'includes/header.html' %}
+<p>Hello and welcome to my new site!</p>
+
+In total you have spent:
+<p>{{ spendingstotal.amount__sum }}</p>
+
+<p>Money left in wallet:</p>
+<p>{{ budgetleft }}</p>
+
+<p>Locations you purchased from:</p>
+
+
+<table border='0'>
+    {% for x in spendingsfilter %}
+        <tr>
+          <td>{{ x.location }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

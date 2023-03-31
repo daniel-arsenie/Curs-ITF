@@ -1,13 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Spendings</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block page_title %}
+Spendings
+{% endblock %}
+
+{% block content %}
+
+    {% include 'includes/header.html' %}
+
+<br>
+All spendings:
+
 {% if spendings %}
     <ul>
         {% for spending in spendings %}
@@ -17,6 +20,8 @@
         {% endfor %}
     </ul>
 {% endif %}
-{% include 'add_spending_form.html' %}
-</body>
-</html>
+
+Add a new record:
+<div class="form">{% include 'add_spending_form.html' %}</div>
+
+{% endblock %}
